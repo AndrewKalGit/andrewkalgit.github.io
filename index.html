@@ -7,10 +7,65 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<audio loop>
+    <source src="./valentine_music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
     <h1 class="valentine-title">Happy Valentine's Day!</h1>
+    <div class="greeting_card">
+    <div class="valentine_message_container">
+     <p class="valentine_message">My heart beats for you!</p>
     <div class="valentine_heart_img_container">
         <img class="valentine_heart_img" src="valentine_heart_img.png" alt="Valentine Heart" />
     </div>
+    <div>
+        <img class="us_together" src="us_together.JPG" alt="Photo of us" />
+        </div>
+        <button id="openCarouselBtn" class="valentine_signature">Click here to become my Valentine</button>
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="carouselModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <h2>First I want to say..</h1>
+                    <p>Thank you for always being my rock and walking with me through life's adventures.
+                    I am so grateful to have you in my life and you remind me everyday to cherish it.
+                    Without you I would be without my other half. You don't only complete me but you 
+                    make me a better man. You remind me that I am never truly alone. That I always have 
+                    someone in my corner.</p>
+                </div>
+                <div class="carousel-item">
+                    <h2>Thank you babe</h1>
+                    <p>When you make me breakfast and help me out of bed in the mornings, because I don't 
+                    have enough strength to get up myself, you don't just start my day you energize it.
+                    When I am sick and don't feel like I can make it through the day, you reassure me 
+                    and make me feel well again.</p>
+                </div>
+                <div class="carousel-item">
+                    <h2>I Love You Babe</h2>
+                    <p>I will never forget the times we spent at greenway and just laughed so hard you had to 
+                    massage your cheeks because they hurt so much from laughing. Or the hardships we faced
+                    at nights in treetops. Yes I cherish it all the good and hard times because it made us.
+                </div>
+                <div class="carousel-item">
+                    <h2>Forever Yours</h2>
+                    <p>Thank you for being my Christ centered partner. I love you more than this html text
+                    can express. Happy Valentine's Day babe!</p>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev">← Previous</button>
+                <button class="next">Next →</button>
+            </div>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

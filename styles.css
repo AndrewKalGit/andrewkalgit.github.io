@@ -1,5 +1,8 @@
 body {
     background-color: rgb(252, 215, 221);
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
 .valentine_heart_img_container {
@@ -9,15 +12,187 @@ body {
 }   
 
 .valentine_heart_img {
-    width: 250px;
+    width: 100px;
+    margin-bottom: 10px;
     animation: pulse 2s infinite;
 }
 
+.us_together {
+    width: 200px;   
+    border-radius: 25px;
+    max-width: 90%;
+}
+
 .valentine-title {
-    color: red;
+    color: #f9007c;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
     margin-top: 50px;
+    padding: 0 20px;
+    font-size: 2em;
+}
+
+.greeting_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.valentine_message_container {
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 50px;
+    background-color: #fff0f5;
+    padding: 30px 25px;
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.valentine_message {
+    font-size: 20px;
+    color: #f9007c;
+    line-height: 1.6;
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+}
+
+.valentine_signature {
+    margin-top: 15px;
+    font-style: italic;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-weight: 400;
+    border: #f9007c 2px solid;
+    color: #f9007c;
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    font-family: 'Georgia', serif;
+    transition: all 0.3s ease;
+}
+
+.valentine_signature:hover {    
+    background-color: #f9007c;
+    color: white;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    min-height: 500px;
+    position: relative;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #f9007c;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #d10067;
+}
+
+.carousel {
+    min-height: 350px;
+    padding: 20px 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-item {
+    display: none;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    font-family: 'Georgia', serif;
+    text-align: left;
+}
+
+.carousel-item.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+.carousel-item p {
+    margin: 0 0 15px 0;
+}
+
+.carousel-item h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #f9007c;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.carousel-controls button {
+    background-color: #f9007c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    flex: 1;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    background-color: #d10067;
+    transform: scale(1.05);
+}
+
+.carousel-controls button:active {
+    transform: scale(0.98);
 }
 
 @keyframes pulse {
@@ -29,5 +204,78 @@ body {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .valentine-title {
+        font-size: 1.8em;
+        margin-top: 30px;
+    }
+    
+    .valentine_message_container {
+        padding: 25px 20px;
+        border-radius: 30px;
+    }
+    
+    .valentine_message {
+        font-size: 18px;
+    }
+    
+    .valentine_signature {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        padding: 25px;
+        width: 95%;
+        min-height: 450px;
+    }
+    
+    .carousel {
+        min-height: 320px;
+    }
+    
+    .carousel-item {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    
+    .carousel-controls button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    
+    .us_together {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .valentine-title {
+        font-size: 1.5em;
+    }
+    
+    .valentine_message {
+        font-size: 16px;
+    }
+    
+    .modal-content {
+        min-height: 500px;
+    }
+    
+    .carousel {
+        min-height: 360px;
+    }
+    
+    .carousel-item {
+        font-size: 15px;
+    }
+    
+    .close-btn {
+        font-size: 30px;
     }
 }
